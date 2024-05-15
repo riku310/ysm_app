@@ -1,0 +1,38 @@
+カラム変わったりいろいろするとDBの更新が面倒なのでsh作りたい
+
+1.テーブルを削除
+sqlite3 db.sqlite3
+
+sqlite> drop table spot;
+
+2.テーブルを作成
+
+CREATE TABLE spot
+(id INTEGER PRIMARY KEY AUTOINCREMENT,
+name TEXT,
+address TEXT,
+phone_number TEXT,
+lat REAL,
+lon REAL,
+detail TEXT,
+open_time TEXT,
+close_time TEXT,
+business_time TEXT,
+regular_dayoff TEXT,
+url TEXT,
+g_speciality INTEGER,
+g_shopping INTEGER,
+g_hotel INTEGER,
+g_sightseeing INTEGER,
+close_down INTEGER
+);
+
+3.CSVをインポート
+
+sqlite> .separator ','
+sqlite> .import ./ex/spot_output.csv spot
+sqlite> select * from spot;
+
+4.データベース情報を，Django用で表示
+  $ python manage.py inspectdb spot
+
