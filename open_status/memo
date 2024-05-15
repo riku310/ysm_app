@@ -1,0 +1,10 @@
+CREATE TABLE open_log
+(id INTEGER PRIMARY KEY AUTOINCREMENT,
+name TEXT,
+time TEXT,
+status INTEGER
+);
+
+
+watch -n 1 "sqlite3 sqlite.db 'select * from open_log;'"
+

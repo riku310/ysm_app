@@ -1,0 +1,44 @@
+<script src="static/main.js"></script>
+
+<div class="btns">
+  A  
+  <input type="button" class="btn" id="a-b1" value="OPEN" onclick="clickBtn1(this.id)">
+  <input type="button" class="btn" disabled id="a-b2" value="CLOSE" onclick="clickBtn1(this.id)">
+</div>
+
+<div class="btns">
+  B  
+  <input type="button" class="btn" id="b-b1" value="OPEN" onclick="clickBtn1(this.id)">
+  <input type="button" class="btn" disabled id="b-b2" value="CLOSE" onclick="clickBtn1(this.id)">
+</div>
+
+<div class="btns">
+  C  
+  <input type="button" class="btn" id="c-b1" value="OPEN" onclick="clickBtn1(this.id)">
+  <input type="button" class="btn" disabled id="c-b2" value="CLOSE" onclick="clickBtn1(this.id)">
+</div>
+
+
+
+<style type="text/css">
+.btns {
+  margin: 10px;
+}
+
+.btn {
+ padding: 10px 30px;
+ background: rgb(128, 255, 0);
+ color: #ffffff;
+}
+
+.btn:disabled {
+ padding: 10px 30px;
+ background: rgb(132, 132, 134);
+ color: #ffffff;
+}
+
+.btn:hover {
+ opacity: 0.7;
+}
+
+</style>
